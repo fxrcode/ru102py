@@ -2,6 +2,26 @@
 
 This is the sample application codebase for the Redis University course [RU102PY, Redis for Python Developers](https://university.redislabs.com/courses/ru102py/).
 
+## Notes
+### setup env
+* cloned repo, then do `make env` will build up environment, use `. env/bin/activate` to activate it in terminal. But it'll be automatically configured in vscode.
+* load the data, remember to flushall in redis-cli before loading to have clean key space.
+* now do the sanity check
+    ```
+    # fxrc @ popos in ~/Learn/Redislabs/ru102py on git:main o env [21:12:04] C:130
+    $ pytest tests/test_hello.py
+    ========================================================== test session starts ==========================================================
+    platform linux -- Python 3.8.5, pytest-5.4.1, py-1.10.0, pluggy-0.13.1
+    rootdir: /home/fxrc/Learn/Redislabs/ru102py, inifile: pytest.ini
+    plugins: dotenv-0.5.2
+    collected 1 item
+
+    tests/test_hello.py .                                                                                                             [100%]
+
+    =========================================================== 1 passed in 0.03s ===========================================================
+    (env) (base)
+    ```
+
 ## Setup
 
 ### Prerequisites
